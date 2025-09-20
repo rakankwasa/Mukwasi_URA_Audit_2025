@@ -1,0 +1,36 @@
+# Matching rules for QuickBooks ↔ EFRIS reconciliation
+
+# Allowable differences in matching
+date_tolerance_days: 3         # Allow invoice dates to differ by up to 3 days
+amount_tolerance_pct: 0.02     # Allow amounts to differ by up to 2% (for FX/rounding)
+
+# Columns in QuickBooks file
+quickbooks_columns:
+  name: "Name"
+  date: "Date"
+  amount: "Rental Invoices Issued"
+  invoice_number: "Num"
+
+# Columns in EFRIS file
+efris_columns:
+  name: "Name of Purchaser"
+  date: "Invoice Date"
+  amount: "Amount (Exclusive of VAT)"
+  fdn: "FDN"
+
+# Name normalization rules
+name_normalization:
+  - find: " & "
+    replace: " and "
+  - find: " ugx"
+    replace: ""
+  - find: " ltd"
+    replace: " limited"
+
+# Exception categories
+exception_reasons:
+  - name_mismatch
+  - date_mismatch
+  - amount_mismatch
+  - missing_in_quickbooks
+  - missing_in_efris

@@ -1,0 +1,20 @@
+# Python venv
+.venv/
+venv/
+# Bytecode & caches
+__pycache__/
+*.pyc
+# Data (keep sensitive/large files out of git)
+data/input/**
+data/output/**
+!data/.gitkeep
+# Notebooks checkpoints
+.ipynb_checkpoints/
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+# Parquet/large exports (if any sneak into repo root)
+*.parquet
+*.xlsx
+*.csv
