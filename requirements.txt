@@ -1,0 +1,25 @@
+# Core data analysis
+pandas
+
+# Excel/CSV support
+openpyxl
+xlsxwriter
+
+# Date handling
+python-dateutil
+dateparser
+
+# Matching logic
+rapidfuzz
+python-Levenshtein
+
+# Configuration
+pyyaml
+
+# Audit trail (logs & reporting)
+loguru
+rich
+
+# Notebooks & testing
+jupyter
+pytest
